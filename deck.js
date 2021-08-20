@@ -25,8 +25,14 @@ const shuffleDeck = () => {
 return orderedDeck;
 }
 export const freshDeck = shuffleDeck();
-export const computerHand = freshDeck.splice(0,9);
-export const playerHand = freshDeck.splice(0,9);
+export const array = []
+    for(let i = 0; i < freshDeck.length; i++){
+        array.push(freshDeck[i].split(''));
+    }
 
 
+
+
+export const computerHand = array.splice(0,9);
+export const playerHand = array.splice(0,9);
 

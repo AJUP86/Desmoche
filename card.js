@@ -1,6 +1,7 @@
-import { CENTER_ID, COMPUTER_ID, PLAYER_ID } from './const.js';
-import { computerHand, playerHand } from './deck.js';
-import { getDOMElement} from './utils.js';
+import {CENTER_ID, COMPUTER_ID, PLAYER_ID } from './const.js';
+import { array, computerHand, playerHand } from './deck.js';
+import { dealCards } from './events.js';
+import {getDOMElement} from './utils.js';
   function getCardHtml(index) {
     return `
     <div class='card'>
@@ -180,4 +181,34 @@ import { getDOMElement} from './utils.js';
     player.appendChild(playerHandContainer);
     const center = document.getElementById('center')
     center.style.height ='220px'
+    dealCards()
   }
+  
+  function getNewCardHtml(index) {
+    return `
+    <div class='card'>
+      <div class='card-row row-top'>
+        <div class="card-text">
+          <div>${index[0]}</div>
+        </div>
+        <div class="card-text">
+          <div>${index[0]}</div>
+        </div>
+      </div>
+      <div class='card-row row-bottom'>
+        <div class="card-text">
+          <div>${index[0]}</div>
+        </div>
+        <div class="card-text">
+          <div>${index[0]}</div>
+        </div>
+      </div>
+    </div>`
+  }
+  export const dealOneCard = ()=> {
+      const center = getDOMElement(CENTER_ID);
+      const gameCard = document.createElement('div');
+      gameCard.innerHTML = getNewCardHtml(array)
+      center.appendChild(gameCard);
+
+  } 

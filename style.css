@@ -7,9 +7,15 @@
   background-color: darkgreen;
   height: 100vh;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  justify-content: space-evenly;
   visibility: hidden;
+}
+#deal-deck {
+  visibility: hidden;
+  border: 2px solid black;
 }
 body {
   background-color: darkgreen;
