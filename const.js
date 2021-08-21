@@ -3,4 +3,4 @@ export const CENTER_ID = 'center';
 export const COMPUTER_ID = 'computer';
 export const PLAYER_ID = 'player';
 export const DEAL_DECK_ID = 'deal-deck';
-export const PLAYING_DECK_ID = 'playing-deck';
+export const FLIPPED_CARDS_ID = 'flipped-cards';
