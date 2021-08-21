@@ -13,8 +13,9 @@ const initializeGame = ()=> {
     firstDeck();
     setupGame();
     
+    
 }
-const setupGame = () => {
+export const setupGame = () => {
     const newBtn = getDOMElement(CENTER_ID);
     const dealBtn = createDOMElement('button', {id:DEAL_DECK_ID});
     dealBtn.innerHTML = 'DEAL';

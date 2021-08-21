@@ -26,13 +26,14 @@ return orderedDeck;
 }
 export const freshDeck = shuffleDeck();
 export const array = []
-    for(let i = 0; i < freshDeck.length; i++){
+for(let i = 0; i < freshDeck.length; i++){
         array.push(freshDeck[i].split(''));
-    }
-
-
-
+}
 
 export const computerHand = array.splice(0,9);
 export const playerHand = array.splice(0,9);
-
+export const newCard = array.pop()
+export const gameDeck = [];
+gameDeck.unshift(newCard);
+console.log(newCard);
+console.log(gameDeck);

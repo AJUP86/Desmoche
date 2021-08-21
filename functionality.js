@@ -10,4 +10,5 @@ export const clickOnStart = () => {
 export const clickToDeal = () => {
     const beforeDeal = document.getElementById(DEAL_DECK_ID);
     beforeDeal.style.visibility ='visible'
+    gameCard;
 }
