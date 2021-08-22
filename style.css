@@ -70,3 +70,6 @@ body {
   cursor: pointer;
   transform: scale(1.05);
 }
+#flipped-cards {
+  position: absolute;
+}
