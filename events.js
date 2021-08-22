@@ -1,5 +1,9 @@
-import { CENTER_ID } from './const.js';
-import { clickOnStart, clickToDeal, dealOneCard } from './functionality.js';
+import {
+  clickOnStart,
+  clickToDeal,
+  dealOneCard,
+  render,
+} from "./functionality.js";
 
 export const displayDeck = () => {
   clickOnStart();
@@ -10,4 +14,7 @@ export const dealCards = () => {
 
 export const handleDealClick = () => {
   dealOneCard();
+};
+export const renderEvent = () => {
+  render();
 };
