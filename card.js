@@ -8,7 +8,7 @@ export const createHand = (hand) => {
 
 export function getNewCardHtml(card) {
   return `
-    <div class='card'>
+    <div class='card' id='color'>
       <div class='card-row row-top'>
         <div class="card-text">
           <div>${card}</div>

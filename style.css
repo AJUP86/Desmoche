@@ -66,10 +66,18 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
+#deal-deck {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
 .new-deck:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
 #flipped-cards {
+  position: relative;
+}
+.new-flipped-card {
   position: absolute;
 }

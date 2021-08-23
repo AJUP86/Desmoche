@@ -1,18 +1,18 @@
-const SUITS = ['♥', '♦', '♠', '♣'];
+const SUITS = ["♥", "♦", "♠", "♣"];
 const RANKS = [
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9',
-  '10',
-  'J',
-  'Q',
-  'K',
-  'A',
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "J",
+  "Q",
+  "K",
+  "A",
 ];
 
 const createDeck = () => {
@@ -48,7 +48,7 @@ const flippedCards = [];
 
 export const dealOneCard = () => {
   if (freshDeck.length === 0) {
-    console.error('cannot deal card: deck is empty');
+    console.error("cannot deal card: deck is empty");
     return;
   }
   const card = freshDeck.pop();

@@ -23,8 +23,32 @@ export const clickToDeal = () => {
 
 export const dealOneCard = () => {
   const flippedCardsDiv = getDOMElement(FLIPPED_CARDS_ID);
+  const newFlippedCard = document.createElement("div");
+  newFlippedCard.classList.add("new-flipped-card");
   const flippedCards = deck.dealOneCard();
-  flippedCardsDiv.innerHTML = getNewCardHtml(flippedCards[0]);
+  newFlippedCard.innerHTML = getNewCardHtml(flippedCards[0]);
+  flippedCardsDiv.appendChild(newFlippedCard);
+  const mouseDown = (e) => {
+    let prevX = e.clientX;
+    let prevY = e.clientY;
+
+    const mouseMove = (e) => {
+      let newX = prevX - e.clientX;
+      let newY = prevY - e.clientY;
+      const rect = flippedCardsDiv.getBoundingClientRect();
+      flippedCardsDiv.style.left = rect.left - newX + "px";
+      flippedCardsDiv.style.top = rect.top - newY + "px";
+      prevX = e.clientX;
+      prevY = e.clientY;
+    };
+    window.addEventListener("mousemove", mouseMove);
+    const mouseUp = () => {
+      window.removeEventListener("mousemove", mouseMove);
+      window.removeEventListener("mouseup", mouseUp);
+    };
+    window.addEventListener("mouseup", mouseUp);
+  };
+  flippedCardsDiv.addEventListener("mousedown", mouseDown);
 };
 
 export const render = () => {
