@@ -51,6 +51,7 @@ export const sortedHand = () => {
   sorted.appendChild(sortedBtn);
   sortedBtn.addEventListener("click", () => {
     createHand(deck.playerHand.sort());
+    console.log(deck.playerHand);
   });
 };
 export const render = () => {
