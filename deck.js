@@ -44,7 +44,7 @@ export const freshDeck = shuffleDeck();
 export const computerHand = freshDeck.splice(0, 9);
 export const playerHand = freshDeck.splice(0, 9);
 
-const flippedCards = [];
+export const flippedCards = [];
 
 export const dealOneCard = () => {
   if (freshDeck.length === 0) {
@@ -52,6 +52,7 @@ export const dealOneCard = () => {
     return;
   }
   const card = freshDeck.pop();
-  flippedCards.unshift(card);
+  flippedCards.push(card);
+  flippedCards.reverse();
   return flippedCards;
 };

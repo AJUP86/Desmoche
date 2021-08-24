@@ -16,6 +16,13 @@
 #deal-deck {
   visibility: hidden;
   border: 2px solid black;
+  border-radius: 0.4em;
+  font-size: 1em;
+  margin: 5px;
+}
+#deal-deck:hover {
+  cursor: pointer;
+  transform: scale(1.5);
 }
 body {
   background-color: darkgreen;
@@ -59,24 +66,52 @@ body {
 .new-deck {
   width: 148px;
   height: 200px;
-  display: flex;
-  justify-content: space-around;
+  position: absolute;
+  left: 25%;
   padding-top: 110px;
   background-image: url(cardDeck.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
-#deal-deck {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+#btn-div {
+  display: flex;
 }
+#take-button {
+  visibility: hidden;
+  border: 2px solid black;
+  border-radius: 0.4em;
+  margin: 5px;
+  font-size: 1em;
+}
+#take-button:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+#pay-button {
+  visibility: hidden;
+  border: 2px solid black;
+  border-radius: 0.4em;
+  margin: 5px;
+  font-size: 1em;
+}
+#pay-button:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
 .new-deck:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
+#flipped-cards-container {
+  position: absolute;
+  top: 73%;
+  left: 64%;
+}
 #flipped-cards {
-  position: relative;
+  position: absolute;
+  top: 33%;
+  left: 64%;
 }
 .new-flipped-card {
   position: absolute;
